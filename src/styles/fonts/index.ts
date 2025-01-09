@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 
+// Police locale : IntegralCF
 const integralCF = localFont({
   src: [
     {
@@ -12,6 +14,7 @@ const integralCF = localFont({
   variable: "--font-integralCF",
 });
 
+// Police locale : Satoshi
 const satoshi = localFont({
   src: [
     {
@@ -34,4 +37,12 @@ const satoshi = localFont({
   variable: "--font-satoshi",
 });
 
-export { integralCF, satoshi };
+// Police Google : Poppins
+const poppins = Poppins({
+  weight: ["400", "500", "700"], // Spécifiez les poids que vous souhaitez charger
+  subsets: ["latin"],           // Subsets pour optimiser le chargement
+  variable: "--font-poppins",   // Nom de la variable CSS
+  display: "swap",              // Optimisation pour le chargement
+});
+
+export { integralCF, satoshi, poppins };
