@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  KeyframeOptions,
   animate,
   useInView,
   useIsomorphicLayoutEffect,
@@ -11,7 +10,7 @@ import { useRef } from "react";
 type AnimatedCounterProps = {
   from: number;
   to: number;
-  animationOptions?: KeyframeOptions;
+  animationOptions?: Partial<Parameters<typeof animate>[2]>;
 };
 
 const AnimatedCounter = ({
